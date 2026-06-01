@@ -21,7 +21,7 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
 /* ============================================================
-   NAV (giữ nguyên)
+   NAV
 ============================================================ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
@@ -64,9 +64,8 @@ nav{
 }
 .hero-bg{
   position:absolute;inset:0;
-  /* ===== THAY ẢNH HERO TẠI ĐÂY ===== */
   background:url("https://vietkite.com.vn/wp-content/uploads/2025/08/Tour-B%E1%BA%AFc-L%C3%A0o-2.png") center/cover no-repeat;
-  background-color:#1a4a2a; /* fallback màu khi chưa có ảnh */
+  background-color:#1a4a2a;
 }
 .hero-bg::after{
   content:"";position:absolute;inset:0;
@@ -154,14 +153,12 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .intro-img-main{
   width:100%;height:420px;object-fit:cover;border-radius:20px;
   box-shadow:0 20px 60px rgba(0,0,0,.18);
-  /* ===== THAY ẢNH INTRO CHÍNH TẠI ĐÂY ===== */
   background-color:#c8dfc8;
 }
 .intro-img-accent{
   position:absolute;bottom:-28px;right:-28px;
   width:200px;height:150px;object-fit:cover;border-radius:14px;
   border:5px solid #fff;box-shadow:0 8px 30px rgba(0,0,0,.2);
-  /* ===== THAY ẢNH NHỎ GÓC DƯỚI PHẢI TẠI ĐÂY ===== */
   background-color:#e8d5b0;
 }
 .intro-text .sec-label{font-size:13px}
@@ -176,7 +173,7 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 }
 
 /* ============================================================
-   HIGHLIGHTS – bố cục mới: masonry-like 2 cột
+   HIGHLIGHTS
 ============================================================ */
 .highlights{background:var(--bg)}
 .hl-grid{
@@ -206,7 +203,7 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .hl-card p{font-size:14px;color:var(--muted);line-height:1.7;margin:0}
 
 /* ============================================================
-   GALLERY – bố cục mới bất đối xứng
+   GALLERY
 ============================================================ */
 .gallery{background:#fff;padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .gal-grid{
@@ -221,10 +218,7 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .g4{grid-column:7/10;grid-row:2/3}
 .g5{grid-column:10/13;grid-row:2/3}
 .g-item{border-radius:12px;overflow:hidden;position:relative}
-.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s;
-  /* ===== THAY ẢNH GALLERY TẠI TỪNG PHẦN TỬ ===== */
-  background-color:#c0c8c0;
-}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s;background-color:#c0c8c0;}
 .g-item:hover img{transform:scale(1.06)}
 .g-caption{
   position:absolute;bottom:0;left:0;right:0;
@@ -266,7 +260,6 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 }
 .tl-banner{
   width:100%;height:160px;object-fit:cover;
-  /* ===== THAY ẢNH BANNER TỪNG NGÀY TẠI ĐÂY ===== */
   background-color:#c0d0c0;
 }
 .tl-body{padding:20px 24px}
@@ -298,53 +291,13 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .notice-box strong{color:var(--orange)}
 
 /* ============================================================
-   PRICING
-============================================================ */
-.pricing{background:linear-gradient(135deg,#0a2e1a 0%,#1A7D3C 55%,#E8510A 100%);color:#fff}
-.pricing .sec-title{color:#fff}
-.pricing .sec-sub{color:rgba(255,255,255,.8)}
-
-/* Bảng giá dạng table */
-.price-table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:0 8px 40px rgba(0,0,0,.3);margin-bottom:32px}
-.price-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;color:var(--text)}
-.price-table th{background:var(--dark);color:#fff;padding:13px 18px;text-align:left;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
-.price-table td{padding:12px 18px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
-.price-table tr:nth-child(even) td{background:#f9fdf9}
-.price-table tr:hover td{background:rgba(232,81,10,.04)}
-.price-table .price-main{font-weight:900;font-size:16px;color:var(--orange)}
-.price-table .price-child{font-weight:700;color:var(--green)}
-.price-table .hol-row td{background:rgba(245,166,35,.12)!important}
-.hol-badge{background:rgba(232,81,10,.15);color:var(--orange);padding:2px 9px;border-radius:50px;font-size:11px;font-weight:800;margin-left:6px}
-
-/* Gói giá */
-.price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:32px}
-.pc{
-  background:rgba(255,255,255,.1);border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,.2);padding:28px 22px;text-align:center;
-  backdrop-filter:blur(10px);transition:transform .25s
-}
-.pc:hover{transform:translateY(-5px)}
-.pc h3{font-size:14px;font-weight:800;margin-bottom:6px;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
-.pc .amt{font-size:clamp(22px,3.5vw,36px);font-weight:900;margin:10px 0 4px;color:#FFD166}
-.pc .note{font-size:12px;opacity:.65;margin-bottom:18px}
-.pc ul{list-style:none;text-align:left}
-.pc ul li{padding:6px 0;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:8px}
-.pc ul li::before{content:"✓";color:var(--green2);font-weight:900}
-.holiday-note{
-  text-align:center;background:rgba(255,255,255,.1);border-radius:12px;
-  padding:16px 20px;border:1px solid rgba(255,255,255,.2);margin-top:8px
-}
-.holiday-note strong{color:#FFD166;font-size:16px}
-
-/* ============================================================
-   SERVICES IN/OUT – 2 cột
+   SERVICES IN/OUT
 ============================================================ */
 .svc{background:var(--bg)}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .svc-img{
   width:100%;height:220px;object-fit:cover;border-radius:var(--radius);
   margin-bottom:20px;box-shadow:var(--shadow);
-  /* ===== THAY ẢNH DỊCH VỤ TẠI ĐÂY ===== */
   background-color:#c8dfc8;
 }
 .svc-block h3{font-size:19px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:10px}
@@ -357,7 +310,7 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .pay-box span{font-size:14.5px;line-height:1.75}
 
 /* ============================================================
-   CONDITIONS – accordion-style
+   CONDITIONS
 ============================================================ */
 .conditions{background:#fff}
 .cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1100px;margin:0 auto}
@@ -385,17 +338,15 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .rev-avatar{
   width:44px;height:44px;border-radius:50%;object-fit:cover;
   border:2px solid var(--orange);
-  /* ===== THAY ẢNH AVATAR KHÁCH HÀNG TẠI ĐÂY ===== */
   background-color:#f0d0b0;
 }
 .rev-name{font-weight:800;font-size:14px}
 .rev-loc{font-size:12px;color:var(--muted)}
 
 /* ============================================================
-   BOOKING FORM (giữ nguyên code form)
+   BOOKING FORM
 ============================================================ */
 .booking{
-  /* ===== THAY ẢNH NỀN BOOKING TẠI ĐÂY ===== */
   background:url("BOOKING_BG_IMAGE_URL") center/cover no-repeat;
   background-color:#0a2e1a;
   position:relative;
@@ -441,7 +392,7 @@ section{padding:clamp(56px,8vw,100px) clamp(16px,5vw,60px)}
 .modal-success .close-ok:hover{background:#c44108}
 
 /* ============================================================
-   FOOTER (giữ nguyên)
+   FOOTER
 ============================================================ */
 footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5vw,60px) 28px}
 .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:40px}
@@ -493,13 +444,12 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   .g1,.g2,.g3,.g4,.g5{grid-column:auto;grid-row:auto;height:200px}
   .ft-grid{grid-template-columns:1fr}
   .trust-inner{justify-content:center;gap:24px}
-  .price-cards{grid-template-columns:1fr}
   .m-fg{grid-template-columns:1fr}
   .m-fi.full{grid-column:span 1}
 }
 
 /* ============================================================
-   FIXED CONTACT BUTTONS (giữ nguyên)
+   FIXED CONTACT BUTTONS
 ============================================================ */
 .fixed-contact-wrapper{
   position:fixed;bottom:24px;right:24px;z-index:99999;
@@ -532,9 +482,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
 </head>
 <body>
 
-<!-- ============================================================
-     NAV (giữ nguyên)
-============================================================ -->
+<!-- NAV -->
 <nav>
   <div class="nav-logo">
     <a href="#home" id="nav-logo-link">
@@ -545,7 +493,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
     <li><a href="#highlights" id="nav-highlights">Điểm Nổi Bật</a></li>
     <li><a href="#gallery" id="nav-gallery">Hình Ảnh</a></li>
     <li><a href="#itinerary" id="nav-itinerary">Lịch Trình</a></li>
-    <li><a href="#pricing" id="nav-pricing">Giá Tour</a></li>
     <li><a href="#booking" id="nav-booking">Đặt Tour</a></li>
   </ul>
   <a href="#booking" class="nav-cta" id="nav-cta-booking">🌏 Đặt Ngay</a>
@@ -558,15 +505,12 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   <a href="#highlights" onclick="toggleMob()" id="mob-highlights">Điểm Nổi Bật</a>
   <a href="#gallery" onclick="toggleMob()" id="mob-gallery">Hình Ảnh</a>
   <a href="#itinerary" onclick="toggleMob()" id="mob-itinerary">Lịch Trình</a>
-  <a href="#pricing" onclick="toggleMob()" id="mob-pricing">Giá Tour</a>
   <a href="#booking" onclick="toggleMob()" id="mob-booking">🌏 Đặt Tour Ngay</a>
 </div>
 
-<!-- ============================================================
-     HERO
-============================================================ -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div><!-- ← Thay ảnh trong CSS: .hero-bg { background: url("ẢNH_CỦA_BẠN") } -->
+  <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">✈ Khởi hành hàng tuần từ TP.HCM · Bay Vietjet Air</div>
     <h1>Khám Phá <span>Đất Nước Lào</span><br>Xinh Đẹp</h1>
@@ -596,15 +540,11 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </div>
 
-<!-- ============================================================
-     INTRO / OVERVIEW
-============================================================ -->
+<!-- INTRO / OVERVIEW -->
 <section class="intro" id="overview">
   <div class="intro-grid">
     <div class="intro-img-wrap">
-      <!-- ===== THAY ẢNH INTRO CHÍNH (khung lớn) TẠI ĐÂY ===== -->
       <img class="intro-img-main" src="https://vietkite.com.vn/wp-content/uploads/2024/02/Luang-Prabang.png" alt="Lào xinh đẹp" onerror="this.style.background='#c8dfc8';this.removeAttribute('src')">
-      <!-- ===== THAY ẢNH NHỎ GÓC DƯỚI PHẢI TẠI ĐÂY ===== -->
       <img class="intro-img-accent" src="https://i0.wp.com/feastoftravel.com/wp-content/uploads/2024/12/11-cj-fFL5K3A3uGo-unsplash.jpg?fit=2048%2C1365&ssl=1" alt="Luang Prabang" onerror="this.style.background='#e8d5b0';this.removeAttribute('src')">
     </div>
     <div class="intro-text">
@@ -623,9 +563,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </section>
 
-<!-- ============================================================
-     HIGHLIGHTS
-============================================================ -->
+<!-- HIGHLIGHTS -->
 <section class="highlights" id="highlights">
   <div class="sec-head c">
     <span class="sec-label">Điểm nổi bật</span>
@@ -633,9 +571,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
     <p class="sec-sub">Hành trình xuyên qua 3 thành phố lớn – từ thủ đô hiện đại đến cố đô thơ mộng và thung lũng thiên đường</p>
   </div>
   <div class="hl-grid">
-
     <div class="hl-card">
-      <!-- ===== THAY ẢNH HIGHLIGHT 1: THÁC KUANGSI TẠI ĐÂY ===== -->
       <img class="hl-img" src="https://datviettour.com.vn/uploads/images/tin-tuc-SEO-NN-chau-a/lao/danh-thang/thac-kuang-si-luang-prabangh.jpg" alt="Thác Kuangsi Luang Prabang" onerror="this.style.background='#b0d0c0';this.removeAttribute('src')">
       <div class="hl-body">
         <span class="hl-tag green">Luang Prabang</span>
@@ -643,9 +579,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <p>Một trong những thác nước đẹp nhất đất nước Triệu Voi. Thác chính cao 60m đổ xuống tạo thành những hồ nước trong xanh nhìn thấu đáy.</p>
       </div>
     </div>
-
     <div class="hl-card">
-      <!-- ===== THAY ẢNH HIGHLIGHT 2: THUYỀN MEKONG TẠI ĐÂY ===== -->
       <img class="hl-img" src="https://dulichxanh.com.vn/uploads/plugin/products/819/1617727098-324662726-tour-du-thuy-n-victoria-mekong-kham-pha-c-n-th-chau-c-3-ngay-2-em.jpg" alt="Du thuyền sông Mê Kông" onerror="this.style.background='#b8c8d8';this.removeAttribute('src')">
       <div class="hl-body">
         <span class="hl-tag orange">Luang Prabang</span>
@@ -653,9 +587,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <p>Ngắm hoàng hôn trên sông Mekong huyền thoại, thả hoa đăng cầu bình an và may mắn – trải nghiệm không thể quên.</p>
       </div>
     </div>
-
     <div class="hl-card">
-      <!-- ===== THAY ẢNH HIGHLIGHT 3: VANG VIENG TẠI ĐÂY ===== -->
       <img class="hl-img" src="https://booking.dulichthiennhien.vn/Data/image/TIN%20T%E1%BB%A8C%20DU%20L%E1%BB%8ACH/174/vang%20vieng%201.jpg" alt="Vang Viêng thiên đường" onerror="this.style.background='#c0d8c0';this.removeAttribute('src')">
       <div class="hl-body">
         <span class="hl-tag purple">Vang Viêng</span>
@@ -663,9 +595,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <p>Động Nang Pha huyền bí, chèo kayak dọc sông Son, khinh khí cầu ngắm núi non trùng điệp – thiên đường của người yêu thiên nhiên.</p>
       </div>
     </div>
-
     <div class="hl-card">
-      <!-- ===== THAY ẢNH HIGHLIGHT 4: VIÊNG CHĂN TẠI ĐÂY ===== -->
       <img class="hl-img" src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/depositphotos401108402xl-1717551487079.jpg" alt="Viêng Chăn thủ đô" onerror="this.style.background='#d0c8a0';this.removeAttribute('src')">
       <div class="hl-body">
         <span class="hl-tag gold">Viêng Chăn</span>
@@ -673,13 +603,10 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <p>Patuxay – Khải hoàn môn xứ Lào, Tháp Thạt Luổng linh thiêng, Chùa Sisaket với 8.000 tượng Phật và trung tâm thương mại Talat Sao.</p>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================================
-     GALLERY
-============================================================ -->
+<!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="sec-head c">
     <span class="sec-label">Hình ảnh</span>
@@ -687,43 +614,30 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
     <p class="sec-sub">Những khoảnh khắc đẹp nhất từ hành trình Lào 5 ngày 4 đêm</p>
   </div>
   <div class="gal-grid">
-
     <div class="g-item g1">
-      <!-- ===== THAY ẢNH GALLERY 1 (ảnh lớn bên trái) TẠI ĐÂY ===== -->
       <img src="https://images.trvl-media.com/place/2125/08f72029-1971-4edf-970b-492c5f6026e0.jpg" alt="Luang Prabang" onerror="this.style.background='#a8c8a8';this.removeAttribute('src')">
       <div class="g-caption">Luang Prabang – Cố đô 700 năm lịch sử</div>
     </div>
-
     <div class="g-item g2">
-      <!-- ===== THAY ẢNH GALLERY 2 TẠI ĐÂY ===== -->
       <img src="https://cdn3.ivivu.com/2024/10/thac-Kuang-Si-ivivu4.png" alt="Thác Kuangsi" onerror="this.style.background='#a0b8c0';this.removeAttribute('src')">
       <div class="g-caption">Thác Kuangsi huyền ảo</div>
     </div>
-
     <div class="g-item g3">
-      <!-- ===== THAY ẢNH GALLERY 3 TẠI ĐÂY ===== -->
       <img src="https://www.trieuhaotravel.vn/Uploads/files/unnamed__2025_05_23T170058_548.png_large.webp" alt="Chùa Xieng Thong" onerror="this.style.background='#c8b890';this.removeAttribute('src')">
       <div class="g-caption">Chùa Xieng Thong cổ kính</div>
     </div>
-
     <div class="g-item g4">
-      <!-- ===== THAY ẢNH GALLERY 4 TẠI ĐÂY ===== -->
       <img src="https://datviettour.com.vn/uploads/images/tin-tuc-SEO-NN-chau-a/lao/danh-thang/vach-nui-pha-hon.jpg" alt="Vang Viêng núi non" onerror="this.style.background='#b0c8a0';this.removeAttribute('src')">
       <div class="g-caption">Vang Viêng – Thung lũng mây</div>
     </div>
-
     <div class="g-item g5">
-      <!-- ===== THAY ẢNH GALLERY 5 TẠI ĐÂY ===== -->
       <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1440,h_960/https://tournuocngoaigiare.com/wp-content/uploads/2023/03/That-Luang-Festival.jpg" alt="Thạt Luổng Viêng Chăn" onerror="this.style.background='#c8c0a0';this.removeAttribute('src')">
       <div class="g-caption">Thạt Luổng – Biểu tượng Viêng Chăn</div>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================================
-     ITINERARY
-============================================================ -->
+<!-- ITINERARY -->
 <section class="itin" id="itinerary">
   <div class="sec-head">
     <span class="sec-label">Chương trình</span>
@@ -740,7 +654,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <div class="tl-lbl">Ngày</div>
       </div>
       <div class="tl-card">
-        <!-- ===== THAY ẢNH BANNER NGÀY 1: Viêng Chăn TẠI ĐÂY ===== -->
         <img class="tl-banner" src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/depositphotos76906987xl-1717551568343.jpg" alt="Ngày 1 – Viêng Chăn" onerror="this.style.background='#b8c8b8';this.removeAttribute('src')">
         <div class="tl-body">
           <div class="tl-route-badge">✈ TP.HCM → Thủ đô Viêng Chăn</div>
@@ -767,7 +680,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <div class="tl-lbl">Ngày</div>
       </div>
       <div class="tl-card">
-        <!-- ===== THAY ẢNH BANNER NGÀY 2: Vang Viêng TẠI ĐÂY ===== -->
         <img class="tl-banner" src="https://trieuhaotravel.vn/Uploads/images/leech/gdocs_1_20250918_091949_7f554d56.png_large.webp" alt="Ngày 2 – Vang Viêng" onerror="this.style.background='#b0c8a8';this.removeAttribute('src')">
         <div class="tl-body">
           <div class="tl-route-badge">🚌 Viêng Chăn → Vang Viêng</div>
@@ -796,7 +708,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <div class="tl-lbl">Ngày</div>
       </div>
       <div class="tl-card">
-        <!-- ===== THAY ẢNH BANNER NGÀY 3: Luang Prabang TẠI ĐÂY ===== -->
         <img class="tl-banner" src="https://d122axpxm39woi.cloudfront.net/images/tours/origin/669a39d6a3446.jpg" alt="Ngày 3 – Luang Prabang" onerror="this.style.background='#a8b8c8';this.removeAttribute('src')">
         <div class="tl-body">
           <div class="tl-route-badge">🚄 Vang Viêng → Luang Prabang (Tàu cao tốc)</div>
@@ -828,7 +739,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <div class="tl-lbl">Ngày</div>
       </div>
       <div class="tl-card">
-        <!-- ===== THAY ẢNH BANNER NGÀY 4: Cung điện / Chùa TẠI ĐÂY ===== -->
         <img class="tl-banner" src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/depositphotos65785277xl-1717551590194.jpg" alt="Ngày 4 – Luang Prabang & Viêng Chăn" onerror="this.style.background='#c0b8a0';this.removeAttribute('src')">
         <div class="tl-body">
           <div class="tl-route-badge">🚄 Luang Prabang → Viêng Chăn (Tàu cao tốc)</div>
@@ -860,7 +770,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
         <div class="tl-lbl">Ngày</div>
       </div>
       <div class="tl-card">
-        <!-- ===== THAY ẢNH BANNER NGÀY 5: Patuxay / Thạt Luổng TẠI ĐÂY ===== -->
         <img class="tl-banner" src="https://image.kkday.com/v2/image/get/s1.kkday.com/campaign_863/20190606100640_1eriY/jpg" alt="Ngày 5 – Viêng Chăn & về HCM" onerror="this.style.background='#c8c0b0';this.removeAttribute('src')">
         <div class="tl-body">
           <div class="tl-route-badge">✈ Viêng Chăn → TP.HCM</div>
@@ -887,49 +796,8 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
 
   </div>
 </section>
-  <div class="price-cards">
-    <div class="pc">
-      <h3>👶 Trẻ em dưới 2 tuổi</h3>
-      <div class="amt">Từ 4.546.000₫</div>
-      <div class="note">Ngủ chung với người lớn đi kèm</div>
-      <ul>
-        <li>Không tính chỗ ngồi máy bay</li>
-        <li>Không tính phòng riêng</li>
-        <li>Phí visa Lào áp dụng</li>
-      </ul>
-    </div>
-    <div class="pc">
-      <h3>🧒 Trẻ em 2–10 tuổi</h3>
-      <div class="amt">Từ 11.990.000₫</div>
-      <div class="note">Ngủ chung với người lớn đi kèm</div>
-      <ul>
-        <li>Có chỗ ngồi máy bay riêng</li>
-        <li>Hành lý 20kg ký gửi</li>
-        <li>Đủ tiêu chuẩn dịch vụ tour</li>
-      </ul>
-    </div>
-    <div class="pc">
-      <h3>🧑 Người lớn từ 11 tuổi</h3>
-      <div class="amt">Từ 12.990.000₫</div>
-      <div class="note">Giá trọn gói, không phí ẩn</div>
-      <ul>
-        <li>Bay VJ831/VJ832 khứ hồi</li>
-        <li>Tàu cao tốc 2 chiều ghế hạng 2</li>
-        <li>KS 4–5★, 2–3 khách/phòng</li>
-        <li>Bảo hiểm du lịch đầy đủ</li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="holiday-note">
-    <strong>🎊 Lịch dịp lễ & Noel: phụ thu tăng nhẹ</strong><br>
-    <span style="font-size:14px;opacity:.85">Phụ thu phòng đơn: <strong>95 USD/tour</strong> · Tiền bồi dưỡng HDV & tài xế: <strong>5 USD/khách/ngày</strong></span>
-  </div>
-</section>
-
-<!-- ============================================================
-     SERVICES IN / OUT
-============================================================ -->
+<!-- SERVICES IN / OUT -->
 <section class="svc" id="services">
   <div class="sec-head">
     <span class="sec-label">Dịch vụ</span>
@@ -937,7 +805,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
   <div class="svc-grid">
     <div class="svc-block inc">
-      <!-- ===== THAY ẢNH DỊCH VỤ BAO GỒM TẠI ĐÂY ===== -->
       <img class="svc-img" src="https://tour.dulichvietnam.com.vn/uploads/files/ch%C3%B9a%20Sisaket.jpg" alt="Dịch vụ bao gồm" onerror="this.style.background='#b8d0b8';this.removeAttribute('src')">
       <h3>✅ Giá bao gồm</h3>
       <ul>
@@ -954,7 +821,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
       </ul>
     </div>
     <div class="svc-block exc">
-      <!-- ===== THAY ẢNH DỊCH VỤ KHÔNG BAO GỒM TẠI ĐÂY ===== -->
       <img class="svc-img" src="https://image.kkday.com/v2/image/get/q_55%2Ct_webp/s1.kkday.com/campaign_863/20190902042652_KDtbg/jpg" alt="Không bao gồm" onerror="this.style.background='#d0c0b0';this.removeAttribute('src')">
       <h3>❌ Giá chưa bao gồm</h3>
       <ul>
@@ -974,9 +840,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </section>
 
-<!-- ============================================================
-     CONDITIONS
-============================================================ -->
+<!-- CONDITIONS -->
 <section class="conditions" id="conditions">
   <div class="sec-head c">
     <span class="sec-label">Điều kiện</span>
@@ -1028,9 +892,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </section>
 
-<!-- ============================================================
-     REVIEWS
-============================================================ -->
+<!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <div class="sec-head c">
     <span class="sec-label">Đánh giá</span>
@@ -1041,7 +903,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
       <div class="rev-stars">★★★★★</div>
       <p class="rev-text">"Tour Lào tuyệt vời! Thác Kuangsi đẹp không bút nào tả được. HDV nhiệt tình, khách sạn sạch, đồ ăn ngon. Sẽ đặt tour tiếp với VietKite!"</p>
       <div class="rev-author">
-        <!-- ===== THAY ẢNH AVATAR KHÁCH HÀNG 1 TẠI ĐÂY ===== -->
         <img class="rev-avatar" src="REVIEW_AVATAR_1_IMAGE_URL" alt="Nguyễn Thị Lan" onerror="this.src='https://ui-avatars.com/api/?name=Nguyen+Thi+Lan&background=E8510A&color=fff&size=44'">
         <div><div class="rev-name">Nguyễn Thị Lan</div><div class="rev-loc">TP.HCM · Tháng 3/2025</div></div>
       </div>
@@ -1050,7 +911,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
       <div class="rev-stars">★★★★★</div>
       <p class="rev-text">"Lễ Khất Thực ở Luang Prabang – trải nghiệm tinh thần sâu sắc nhất cuộc đời mình. Du thuyền Mekong ngắm hoàng hôn là khoảnh khắc không thể quên."</p>
       <div class="rev-author">
-        <!-- ===== THAY ẢNH AVATAR KHÁCH HÀNG 2 TẠI ĐÂY ===== -->
         <img class="rev-avatar" src="REVIEW_AVATAR_2_IMAGE_URL" alt="Trần Văn Minh" onerror="this.src='https://ui-avatars.com/api/?name=Tran+Van+Minh&background=1A7D3C&color=fff&size=44'">
         <div><div class="rev-name">Trần Văn Minh</div><div class="rev-loc">Bình Dương · Tháng 4/2025</div></div>
       </div>
@@ -1059,7 +919,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
       <div class="rev-stars">★★★★★</div>
       <p class="rev-text">"Vang Viêng đẹp như tranh vẽ! Chèo Kayak dọc sông Son cả đoàn đều mê. Tàu cao tốc tiện lợi, lịch trình rất hợp lý. Cảm ơn VietKite!"</p>
       <div class="rev-author">
-        <!-- ===== THAY ẢNH AVATAR KHÁCH HÀNG 3 TẠI ĐÂY ===== -->
         <img class="rev-avatar" src="REVIEW_AVATAR_3_IMAGE_URL" alt="Lê Thị Hương" onerror="this.src='https://ui-avatars.com/api/?name=Le+Thi+Huong&background=F5A623&color=fff&size=44'">
         <div><div class="rev-name">Lê Thị Hương</div><div class="rev-loc">Đồng Nai · Tháng 5/2025</div></div>
       </div>
@@ -1067,11 +926,8 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </section>
 
-<!-- ============================================================
-     BOOKING FORM (giữ nguyên code form)
-============================================================ -->
+<!-- BOOKING FORM -->
 <section class="booking" id="booking">
-  <!-- Thay ảnh nền trong CSS: .booking { background: url("ẢNH_NỀN") ... } -->
   <div class="sec-head c">
     <span class="sec-label" style="color:rgba(255,255,255,.7)">Thiết kế tour</span>
     <h2 class="sec-title">Thiết Kế Tour Riêng Của Bạn</h2>
@@ -1182,9 +1038,7 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
   </div>
 </section>
 
-<!-- ============================================================
-     FOOTER (giữ nguyên)
-============================================================ -->
+<!-- FOOTER -->
 <footer>
   <div class="ft-grid">
     <div class="ft-brand">
@@ -1255,7 +1109,6 @@ footer{background:#0d1f13;color:rgba(255,255,255,.75);padding:56px clamp(16px,5v
 </div>
 
 <script>
-// Nav toggle
 function toggleMob(){document.getElementById("mobMenu").classList.toggle("open")}
 document.addEventListener("click",function(e){
   const m=document.getElementById("mobMenu"),n=document.querySelector("nav");
@@ -1265,7 +1118,6 @@ window.addEventListener("scroll",function(){
   document.querySelector("nav").style.boxShadow=window.scrollY>40?"0 4px 24px rgba(0,0,0,.1)":"none";
 });
 
-// Smooth scroll
 function scrollToTarget(target){
   if(!target)return;
   const navH=document.querySelector("nav").offsetHeight;
@@ -1292,7 +1144,6 @@ window.addEventListener("DOMContentLoaded",function(){
   }
 });
 
-/* ── SUBMIT FORM ── */
 var GAS_URL="https://script.google.com/macros/s/AKfycbyQVjaKOz1KmYepN_O00ppqaB2JZNr635d_Ak7qvA4HtLuTrt4sw1AGnHf4I9up4Q83eg/exec";
 
 function submitCTForm(){
